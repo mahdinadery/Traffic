@@ -1,0 +1,662 @@
+/* RTL and Persian typography overrides for the upstream simulator UI. */
+html[lang="fa"],
+html[lang="fa"] body {
+  direction: rtl;
+}
+
+html[lang="fa"] body {
+  font-family: Tahoma, "Noto Sans Arabic", "Noto Naskh Arabic", Arial, sans-serif;
+  text-align: right;
+  color: #273449;
+}
+
+html[lang="fa"] #container {
+  direction: rtl;
+  text-align: right;
+}
+
+/* The traffic scene is a geographic diagram: keep it LTR and never mirror it. */
+html[lang="fa"] #contents,
+html[lang="fa"] canvas {
+  direction: ltr;
+}
+
+html[lang="fa"] #header {
+  direction: rtl;
+  text-align: right;
+  left: 24vmin;
+  right: auto;
+  border-radius: 0.6em;
+  color: #172554;
+  line-height: 1.45;
+}
+
+html[lang="fa"] .fa-brand {
+  display: inline-block;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+html[lang="fa"] .fa-brand::before {
+  content: "●";
+  color: #16a34a;
+  font-size: 0.72em;
+  margin-left: 0.45em;
+}
+
+html[lang="fa"] #sliders,
+html[lang="fa"] #infotext,
+html[lang="fa"] #scenarios,
+html[lang="fa"] #impressum,
+html[lang="fa"] #link1Div,
+html[lang="fa"] #link2Div,
+html[lang="fa"] #infoFlags {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="fa"] #sliders center {
+  display: block;
+  text-align: right;
+}
+
+html[lang="fa"] #sliders h3 {
+  margin: 1.25vmin 0 0.7vmin;
+  padding: 0.45vmin 1vmin;
+  border-right: 0.45vmin solid #0f766e;
+  border-radius: 0 0.45em 0.45em 0;
+  background: linear-gradient(90deg, rgba(20, 184, 166, 0.05), rgba(20, 184, 166, 0.16));
+  font-style: normal;
+  text-align: right;
+}
+
+html[lang="fa"] #sliders table {
+  direction: rtl;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.25vmin;
+}
+
+html[lang="fa"] #sliders td {
+  text-align: right;
+  padding: 0.2vmin 0.35vmin;
+  line-height: 1.5;
+}
+
+html[lang="fa"] #sliders td:first-child {
+  width: 33%;
+  white-space: normal;
+}
+
+html[lang="fa"] #sliders td:nth-child(2) {
+  width: 43%;
+}
+
+html[lang="fa"] #sliders td:last-child {
+  width: 24%;
+  direction: ltr;
+  text-align: left;
+  white-space: nowrap;
+}
+
+html[lang="fa"] #sliders input[type="range"] {
+  direction: ltr;
+  accent-color: #0f766e;
+}
+
+html[lang="fa"] #sliders [id$="Val"] {
+  direction: ltr;
+  unicode-bidi: plaintext;
+  text-align: left;
+  color: #172554;
+  font-variant-numeric: tabular-nums;
+}
+
+html[lang="fa"] #infotext {
+  box-sizing: border-box;
+  text-align: right;
+  line-height: 1.8;
+}
+
+html[lang="fa"] #infotext h1,
+html[lang="fa"] #infotext h2,
+html[lang="fa"] #infotext h3 {
+  font-family: inherit;
+  font-style: normal;
+  text-align: right;
+}
+
+html[lang="fa"] #infotext ul,
+html[lang="fa"] #infotext ol {
+  margin-right: 1.2em;
+  margin-left: 0;
+  padding-right: 0.5em;
+  padding-left: 0;
+}
+
+html[lang="fa"] #gameDiv button,
+html[lang="fa"] #gameRampMeteringDiv button,
+html[lang="fa"] #gameRoutingDiv button,
+html[lang="fa"] #playlinksRampMeteringGame button,
+html[lang="fa"] #playlinksRoutingGame button {
+  max-width: 31vmin;
+  min-height: 3.7vmin;
+  padding: 0.5em 0.7em;
+  border: 1px solid #0f766e;
+  border-radius: 0.65em;
+  background: #0f766e;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1.65vmin;
+  font-weight: 700;
+  line-height: 1.45;
+  cursor: pointer;
+}
+
+html[lang="fa"] button:hover,
+html[lang="fa"] button:focus-visible {
+  background: #115e59;
+}
+
+html[lang="fa"] .scenario-nav {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.7vmin;
+  width: 100%;
+  direction: rtl;
+}
+
+html[lang="fa"] .scenario-link {
+  min-width: 0;
+  min-height: 8.6vmin;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25vmin;
+  padding: 0.35vmin;
+  border: 1px solid rgba(71, 85, 105, 0.18);
+  border-radius: 0.7em;
+  background: rgba(255, 255, 255, 0.91);
+  box-shadow: 0 0.35vmin 0.9vmin rgba(15, 23, 42, 0.07);
+  color: #334155;
+  font-size: 1.35vmin;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 150ms ease, border-color 150ms ease, background 150ms ease;
+}
+
+html[lang="fa"] .scenario-link img {
+  display: block;
+  width: 4.3vmin;
+  height: 4.1vmin;
+  object-fit: contain;
+}
+
+html[lang="fa"] .scenario-link:hover,
+html[lang="fa"] .scenario-link:focus-visible {
+  transform: translateY(-1px);
+  border-color: #0f766e;
+  background: #f0fdfa;
+  text-decoration: none;
+  outline: 2px solid rgba(15, 118, 110, 0.25);
+  outline-offset: 1px;
+}
+
+html[lang="fa"] .scenario-link[aria-current="page"] {
+  border-color: #0f766e;
+  background: #ccfbf1;
+  color: #134e4a;
+}
+
+html[lang="fa"] .language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  direction: rtl;
+  padding: 0.3em 0.45em;
+  border: 1px solid rgba(71, 85, 105, 0.2);
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1.5vmin;
+  white-space: nowrap;
+}
+
+html[lang="fa"] .language-switcher a,
+html[lang="fa"] .language-switcher span {
+  display: inline-block;
+  padding: 0.2em 0.45em;
+  border-radius: 99px;
+}
+
+html[lang="fa"] .language-switcher [aria-current="page"] {
+  background: #0f766e;
+  color: #fff;
+  font-weight: 700;
+}
+
+html[lang="fa"] img[role="button"] {
+  cursor: pointer;
+  border-radius: 0.45em;
+}
+
+html[lang="fa"] img[role="button"]:focus-visible {
+  outline: 3px solid #0f766e;
+  outline-offset: 2px;
+}
+
+html[lang="fa"] #link2Div {
+  display: none;
+}
+
+html[lang="fa"] .fa-quick-help {
+  max-width: 44vmin;
+  margin: 0.75vmin 0;
+  padding: 0.8vmin 1vmin;
+  border-right: 0.45vmin solid #0284c7;
+  border-radius: 0 0.6em 0.6em 0;
+  background: rgba(239, 246, 255, 0.9);
+  color: #334155;
+  font-size: 1.6vmin;
+  line-height: 1.7;
+}
+
+html[lang="fa"] .fa-quick-help strong {
+  color: #0f4c81;
+}
+
+html[lang="fa"] .back-to-simulation {
+  display: inline-block;
+  margin: 0.8em;
+  padding: 0.55em 0.85em;
+  border-radius: 0.6em;
+  background: #ecfeff;
+  color: #155e75;
+  font-weight: 700;
+}
+
+/* The two challenge pages use a separate set of absolutely-positioned panels. */
+html[lang="fa"] #sliderMainRoutingGame,
+html[lang="fa"] #slidersRoutingGame,
+html[lang="fa"] #slidersRampMeteringGame {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="fa"] #sliderMainRoutingGame center,
+html[lang="fa"] #slidersRoutingGame center,
+html[lang="fa"] #slidersRampMeteringGame center {
+  display: block;
+  text-align: right;
+}
+
+html[lang="fa"] #sliderMainRoutingGame table,
+html[lang="fa"] #slidersRoutingGame table,
+html[lang="fa"] #slidersRampMeteringGame table {
+  direction: rtl;
+  width: 100%;
+}
+
+html[lang="fa"] #sliderMainRoutingGame td,
+html[lang="fa"] #slidersRoutingGame td,
+html[lang="fa"] #slidersRampMeteringGame td {
+  text-align: right;
+  line-height: 1.5;
+}
+
+html[lang="fa"] #sliderMainRoutingGame [id$="Val"],
+html[lang="fa"] #slidersRoutingGame [id$="Val"],
+html[lang="fa"] #slidersRampMeteringGame [id$="Val"] {
+  direction: ltr;
+  unicode-bidi: plaintext;
+  text-align: left;
+  white-space: nowrap;
+}
+
+html[lang="fa"] #infotextRampMeteringGame,
+html[lang="fa"] #infotextRoutingGame {
+  direction: rtl;
+  text-align: right;
+  line-height: 1.8;
+  font-family: Tahoma, "Noto Sans Arabic", "Noto Naskh Arabic", Arial, sans-serif;
+}
+
+html[lang="fa"] #infotextRampMeteringGame h1,
+html[lang="fa"] #infotextRampMeteringGame h2,
+html[lang="fa"] #infotextRoutingGame h1,
+html[lang="fa"] #infotextRoutingGame h2 {
+  font-family: inherit;
+  text-align: right;
+}
+
+html[lang="fa"] #infotextRampMeteringGame ul,
+html[lang="fa"] #infotextRoutingGame ul {
+  margin-right: 1.1em;
+  margin-left: 0;
+  padding-right: 0.35em;
+  padding-left: 0;
+}
+
+html[lang="fa"] #gameRampMeteringDiv,
+html[lang="fa"] #gameRoutingDiv,
+html[lang="fa"] #playlinksRampMeteringGame,
+html[lang="fa"] #playlinksRoutingGame {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="fa"] #playlinksRampMeteringGame button,
+html[lang="fa"] #playlinksRoutingGame button {
+  white-space: normal;
+}
+
+html[lang="fa"] #link1Div a {
+  direction: rtl;
+  unicode-bidi: plaintext;
+}
+
+html[lang="fa"] a:focus-visible {
+  outline: 2px solid #0f766e;
+  outline-offset: 2px;
+}
+
+@media all and (min-aspect-ratio: 6/5) {
+  html[lang="fa"] #scenarios {
+    top: 1vmin;
+    left: 115vmin;
+    right: auto;
+    width: 44vmin;
+    height: auto;
+  }
+
+  html[lang="fa"] #sliders {
+    top: 22vmin;
+    left: 110vmin;
+    right: auto;
+    width: 55vmin;
+    height: auto;
+    max-height: 73vmin;
+    overflow-y: auto;
+    padding-bottom: 3vmin;
+  }
+
+  html[lang="fa"] #infotext {
+    width: 50vmin;
+    padding: 0.8vmin 1.2vmin;
+    margin-top: 0.5vmin;
+  }
+}
+
+@media all and (max-aspect-ratio: 6/5) {
+  html[lang="fa"] body {
+    min-height: 230vmin;
+    font-size: clamp(14px, 3.6vmin, 17px);
+  }
+
+  html[lang="fa"] button,
+  html[lang="fa"] select {
+    font-size: clamp(14px, 3.4vmin, 18px);
+  }
+
+  html[lang="fa"] td,
+  html[lang="fa"] th {
+    font-size: clamp(13px, 3.2vmin, 16px);
+  }
+
+  html[lang="fa"] h3,
+  html[lang="fa"] #sliders h3 {
+    font-size: clamp(15px, 3.8vmin, 19px);
+  }
+
+  html[lang="fa"] #header {
+    font-size: clamp(15px, 3.8vmin, 19px);
+  }
+
+  html[lang="fa"] #scenarios {
+    top: 83vmin;
+    left: 2vmin;
+    right: auto;
+    width: 96vmin;
+    height: auto;
+  }
+
+  html[lang="fa"] .scenario-link {
+    min-height: 10vmin;
+    font-size: clamp(12px, 2.8vmin, 15px);
+  }
+
+  html[lang="fa"] .scenario-link img {
+    width: 5vmin;
+    height: 4.5vmin;
+  }
+
+  html[lang="fa"] #sliders {
+    top: 108vmin;
+    left: 2vmin;
+    right: auto;
+    width: 96vmin;
+    max-height: none;
+    overflow: visible;
+    padding-bottom: 5vmin;
+  }
+
+  html[lang="fa"] #sliders input[type="range"] {
+    width: 38vw;
+    min-width: 115px;
+    max-width: 260px;
+  }
+
+  html[lang="fa"] #sliders td:first-child {
+    width: 32%;
+  }
+
+  html[lang="fa"] #sliders td:nth-child(2) {
+    width: 45%;
+  }
+
+  html[lang="fa"] #sliders td:last-child {
+    width: 23%;
+    white-space: normal;
+  }
+
+  html[lang="fa"] #infotext {
+    position: static;
+    width: 92vw;
+    max-width: 96vmin;
+    margin: 1vmin auto;
+    padding: 1.5vmin;
+  }
+
+  html[lang="fa"] #infoFlags {
+    top: 74vmin;
+    left: auto;
+    right: 2vmin;
+    width: auto;
+  }
+
+  html[lang="fa"] .language-switcher {
+    font-size: clamp(12px, 2.8vmin, 15px);
+  }
+
+  html[lang="fa"] #infotext,
+  html[lang="fa"] .fa-quick-help {
+    font-size: clamp(13px, 3.2vmin, 16px);
+  }
+
+  html[lang="fa"] #gameDiv button,
+  html[lang="fa"] #gameRampMeteringDiv button,
+  html[lang="fa"] #gameRoutingDiv button {
+    max-width: 34vmin;
+    font-size: clamp(14px, 3.4vmin, 18px);
+  }
+
+  html[lang="fa"] #impressum {
+    position: absolute;
+    top: 220vmin;
+    left: 2vmin;
+    right: auto;
+    z-index: 2;
+    font-size: 2.5vmin;
+  }
+
+  html[lang="fa"] #link1Div {
+    display: none;
+  }
+
+  html[lang="fa"] .fa-quick-help {
+    max-width: 92vw;
+    font-size: 2vmin;
+  }
+}
+
+@media all and (max-aspect-ratio: 17/10) {
+  html[lang="fa"] #header {
+    top: 1.5vw;
+    left: 3vw;
+    font-size: 2.3vw;
+  }
+
+  html[lang="fa"] #gameRampMeteringDiv,
+  html[lang="fa"] #gameRoutingDiv {
+    left: 3vw;
+    width: 40vw;
+    font-size: 2vw;
+  }
+
+  html[lang="fa"] #playlinksRampMeteringGame,
+  html[lang="fa"] #playlinksRoutingGame {
+    left: 3vw;
+    width: 40vw;
+  }
+
+  html[lang="fa"] #slidersRampMeteringGame,
+  html[lang="fa"] #slidersRoutingGame,
+  html[lang="fa"] #sliderMainRoutingGame {
+    left: 54vw;
+    width: 43vw;
+  }
+
+  html[lang="fa"] #infotextRampMeteringGame,
+  html[lang="fa"] #infotextRoutingGame {
+    left: 54vw;
+    width: 42vw;
+    padding: 0.8vw 1.2vw;
+    font-size: 1.55vw;
+  }
+
+  html[lang="fa"] #infoFlags {
+    right: 1vw;
+    left: auto;
+    width: auto;
+  }
+
+  html[lang="fa"] #gameRampMeteringDiv button,
+  html[lang="fa"] #gameRoutingDiv button,
+  html[lang="fa"] #playlinksRampMeteringGame button,
+  html[lang="fa"] #playlinksRoutingGame button {
+    max-width: 39vw;
+    min-height: 5vw;
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 700px) and (max-aspect-ratio: 17/10) {
+  html[lang="fa"] body {
+    min-height: 215vw;
+    font-size: clamp(14px, 3.7vw, 17px);
+  }
+
+  html[lang="fa"] #contents {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 58vw;
+  }
+
+  html[lang="fa"] #gameRampMeteringDiv,
+  html[lang="fa"] #gameRoutingDiv {
+    top: 60vw;
+    left: 3vw;
+    width: 42vw;
+    height: auto;
+  }
+
+  html[lang="fa"] #playlinksRampMeteringGame,
+  html[lang="fa"] #playlinksRoutingGame {
+    top: 72vw;
+    left: 3vw;
+    width: 43vw;
+    height: auto;
+  }
+
+  html[lang="fa"] #slidersRampMeteringGame,
+  html[lang="fa"] #slidersRoutingGame,
+  html[lang="fa"] #sliderMainRoutingGame {
+    top: 60vw;
+    left: 51vw;
+    width: 46vw;
+    height: auto;
+  }
+
+  html[lang="fa"] #slidersRampMeteringGame input[type="range"],
+  html[lang="fa"] #slidersRoutingGame input[type="range"],
+  html[lang="fa"] #sliderMainRoutingGame input[type="range"] {
+    width: 24vw;
+    min-width: 95px;
+    max-width: 180px;
+  }
+
+  html[lang="fa"] #infotextRampMeteringGame,
+  html[lang="fa"] #infotextRoutingGame {
+    position: absolute;
+    top: 84vw;
+    left: 3vw;
+    width: 94vw;
+    height: 86vw;
+    max-height: 100vw;
+    box-sizing: border-box;
+    padding: 2vw 3vw;
+    font-size: clamp(13px, 3.4vw, 16px);
+  }
+
+  html[lang="fa"] #infoFlags {
+    top: 174vw;
+    right: 3vw;
+    left: auto;
+    width: auto;
+  }
+
+  html[lang="fa"] #impressum {
+    top: 176vw;
+    left: 3vw;
+    right: auto;
+    width: auto;
+  }
+
+  html[lang="fa"] #link1Div {
+    display: none;
+  }
+
+  html[lang="fa"] .language-switcher {
+    font-size: 13px;
+  }
+
+  html[lang="fa"] #gameRampMeteringDiv button,
+  html[lang="fa"] #gameRoutingDiv button,
+  html[lang="fa"] #playlinksRampMeteringGame button,
+  html[lang="fa"] #playlinksRoutingGame button {
+    max-width: 42vw;
+    min-height: 10vw;
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[lang="fa"] .scenario-link {
+    transition: none;
+  }
+}
